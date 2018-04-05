@@ -6,29 +6,46 @@ funcionario::funcionario(){
 	admissao.setdata(1,1,1);
 }
 
-funcionario::funcionario(string name_, double salario_, int d_, int m_, int y_ ){
+funcionario::funcionario(string name_, double salario_){
 	strcpy(nome, nome_);
 	salario = salario_;
-	admissao.setdata(d_,m_,y_);
+	cin >> admissao;
 }
 void
 funcionario::setnome(string nome_){
 	strcpy(nome, nome_);
 }
 void
-funcionario::setsalario(float salario_){
-	salario = salario_;
+funcionario::setsalario(){
+	cout << "digite o salario" << endl;
+	cin >> salario;
 }
 void
-funcionario::setdata(int d_,m_y_){
-	admissao.setdata(d_,m_,y_);
+funcionario::setdata(){
+	cout << "Data de admissao";
+	cin >> admissao;
 }
-void
-funcionario::exibir(){
-	cout<< "Nome:" << nome << endl;
-	cout<< "Salario:" << salario << endl;
-	cout<< "Data de admissao" << admissao.print(); << endl;
+
+std::istream& 
+operator>> (std::istream &i, funcionario &p) { 
+	std::cout << "Entre com o nome do funcionario: ";
+	i >> p.nome; 
+	std::cout << "Digite o salario do funcionario: ";
+	i >> p.salario;
+	cout << "Data de admissao";
+	cin >> p.admissao;
+	return i;
 }
+
+std::ostream& 
+operator<< (std::ostream &o, funcionario const p) { 
+	o << "Nome: " << p.nome << endl;
+	o << "Salario: " << p.salario << endl;
+	o << "Data de admissao: " << p.admissao << endl;
+	return o;
+} 
 
 funcionario::~funcionario(){
 }
+
+

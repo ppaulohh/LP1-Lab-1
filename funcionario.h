@@ -17,13 +17,13 @@ private:
 
 public:
 	funcionario();
-	funcionario(string name_, double salario_, int d_, int m_, int y_ );
+	funcionario(string name_, double salario_);
 	~funcionario();
 	void setnome(string nome_);
 	void setsalario(float salario_);
-	void setdata(int d_,m_y_);
-	void exibir();
-	
+	void setdata();
+	friend std::ostream& operator<< (std::ostream &o, funcionario const p);
+	friend std::istream& operator>> (std::istream &i, funcionario &p);
 };
 
 #endif

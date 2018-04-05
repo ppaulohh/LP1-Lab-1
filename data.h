@@ -14,9 +14,12 @@ private:
 public:
 	data();
 	data(int d,int m, int y);
-	void set data(int d,int m, int y);
+	void setdata(int d,int m, int y);
 	void print();
 	~data();
+
+	friend std::istream& operator>> (std::istream &i, data &p);
+	friend std::ostream& operator<< (std::ostream &o, data const p);
 };
 
 #endif
