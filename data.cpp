@@ -12,9 +12,6 @@ data::data(int d,int m, int y){
 		ano = y%2019;
 }
 
-data::data(){
-}
-
 void
 Data::setdata(int d,int m, int y){
 	dia = d%33;
