@@ -9,26 +9,32 @@ empresa::addfuncionarios(){
 
 }
 
+void 
+setname(){
+	cout << "insira o nome da empresa" << endl;
+	cin >> nome;
+}
+void 
+addfuncionarios();
+void 
+setcnpj(int cnpj_);
+
+
 
 empresa::empresa(){
 
 }
 empresa::~empresa();
-	
 
 
 
-/*vou usar para imprimir: 
-for( int i = 0; i < v.size(); i++ ) {cout << v[i] << " "; }*/
+std::ostream& 
+operator<< (std::ostream &o, empresa const p) { 
+	o << "Nome: " << p.nome << endl;
+	o << "CNPJ: " << p.cnpj << endl;
+	o << "Colaboradores: " << endl << for( int i = 0; i < lista.size(); i++ ) {cout << lista[i] << endl ; } << endl;
+	return o;
+} 	
 
 
 
-/*std::istream& 
-operator>> (std::istream &i, Professor &p) { 
-	std::cout << "Entre com o nome do professor: ";
-	i >> p.m_nome; 
-	std::cout << "Entre com a idade: ";
-	i >> p.m_idade;
-	return i;
-}
-*/
