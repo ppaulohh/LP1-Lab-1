@@ -1,3 +1,7 @@
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H 
+
+
 #include "funcionario.h"
 #include <vector>
 #include <iostream>
@@ -20,3 +24,4 @@ public:
 	friend std::ostream& operator<< (std::ostream &o, data const p);
 };
 
+#endif

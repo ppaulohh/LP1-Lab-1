@@ -14,10 +14,11 @@ setname(){
 	cout << "insira o nome da empresa" << endl;
 	cin >> nome;
 }
+
 void 
-addfuncionarios();
-void 
-setcnpj(int cnpj_);
+setcnpj(int cnpj_){
+	cnpj = cnpj_;
+}
 
 
 

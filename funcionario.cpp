@@ -1,5 +1,9 @@
 #include"funcionario.h"
 
+string getnome(){
+	return nome;
+}
+
 funcionario::funcionario(){
 	strcpy(nome, "SemNome");
 	salario = 981;

@@ -16,9 +16,11 @@ private:
 	data admissao;
 
 public:
+	string getnome();
 	funcionario();
 	funcionario(string name_, double salario_);
 	~funcionario();
+	string getnome();
 	void setnome(string nome_);
 	void setsalario(float salario_);
 	void setdata();
